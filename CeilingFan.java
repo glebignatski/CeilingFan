@@ -7,25 +7,30 @@ public class CeilingFan {
 
 	public static void main(String[] args) {
 		// testing the fan
+		CeilingFan c = new CeilingFan();
 		
 		// test 1: two increase operations
 		System.out.println("----------------Test 1----------------");
-		CeilingFan c1 = new CeilingFan();
-		c1.increaseSpeed();
-		c1.increaseSpeed();
+		c.increaseSpeed();
+		c.increaseSpeed();
 		
 		// test 2: three increase operations
-		CeilingFan c2 = new CeilingFan();
+		c = new CeilingFan();
 		System.out.println("----------------Test 2----------------");
-		c2.increaseSpeed();
-		c2.increaseSpeed();
-		c2.increaseSpeed();
+		c.increaseSpeed();
+		c.increaseSpeed();
+		c.increaseSpeed();
 		
 		// test 3: increase operation and an off operation
-		CeilingFan c3 = new CeilingFan();
+		c = new CeilingFan();
 		System.out.println("----------------Test 3----------------");
-		c3.increaseSpeed();
-		c3.off();
+		c.increaseSpeed();
+		c.off();
+		
+		// test 4: off operation when fan is off
+		c = new CeilingFan();
+		System.out.println("----------------Test 4----------------");
+		c.off();
 
 	}
 	
@@ -45,9 +50,14 @@ public class CeilingFan {
 	
 	// pull cord #2 that is used to turn off the fan
 	public void off() {
-		this.speed = 0;
-		this.status = false;
-		System.out.println("The fan is turned off\n");
+		if (status) {
+			this.speed = 0;
+			this.status = false;
+			System.out.println("The fan is turned off\n");
+		}
+		else {
+			System.out.println("The fan is already off");
+		}
 	}
 
 }
