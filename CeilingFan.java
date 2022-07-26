@@ -3,6 +3,7 @@ public class CeilingFan {
 	
 	// the fan comes turned off
 	int speed = 0;
+	boolean status = false;
 
 	public static void main(String[] args) {
 		// testing the fan
@@ -32,6 +33,7 @@ public class CeilingFan {
 	public void increaseSpeed() {
 		// modulus operator needed to cycle over the settings
 		this.speed = (this.speed + 1) % 3;
+		this.status = this.speed > 0;
 		if (this.speed > 0) {
 			System.out.println("The fan is on");
 			System.out.println("The speed is " + this.speed + "\n");
@@ -44,6 +46,7 @@ public class CeilingFan {
 	// pull cord #2 that is used to turn off the fan
 	public void off() {
 		this.speed = 0;
+		this.status = off;
 		System.out.println("The fan is turned off\n");
 	}
 
