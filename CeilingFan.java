@@ -34,7 +34,7 @@ public class CeilingFan {
 
 	}
 	
-	// pull cord #1 that is used to increase the speed of the fan
+	// pull cord #1: used to increase the speed of the fan
 	public void increaseSpeed() {
 		// modulus operator needed to cycle over the settings
 		this.speed = (this.speed + 1) % 3;
@@ -48,7 +48,7 @@ public class CeilingFan {
 		}
 	}
 	
-	// pull cord #2 that is used to turn off the fan
+	// pull cord #2: used to turn off the fan
 	public void off() {
 		if (status) {
 			this.speed = 0;
