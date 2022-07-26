@@ -46,7 +46,7 @@ public class CeilingFan {
 	// pull cord #2 that is used to turn off the fan
 	public void off() {
 		this.speed = 0;
-		this.status = off;
+		this.status = false;
 		System.out.println("The fan is turned off\n");
 	}
 
